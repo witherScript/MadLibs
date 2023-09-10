@@ -23,11 +23,10 @@ namespace MadLibs.Controllers
     {
       Story sciFiStory = new Story(words);
       return View(sciFiStory);
-      
     }
 
     [Route("/fantasy-form")]
-    public ActionResult Form(StoryParameters words) 
+    public ActionResult FantasyForm() 
     {
       return View();
     }
@@ -38,7 +37,28 @@ namespace MadLibs.Controllers
       Story fantasyStory = new Story(words);
       return View(fantasyStory);
     }
-     [Route("/Action-form")]
-    public ActionResult
-  }
+     [Route("/action-form")]
+    public ActionResult ActionForm()
+    {
+      return View();
+    }
+    [Route("/action")]
+    public ActionResult Action(StoryParameters words)
+    {
+      Story ActionStory = new Story(words);
+      return View(ActionStory);
+    }
+
+    //todo: HorrorForm View
+
+    [Route("/horror-form")]
+    public Action 
+
+    [Route("/horror")]
+    public ActionResult Horror(StoryParameters words)
+    {
+      Story HorrorStory = new Story(words);
+      return View(HorrorStory);
+    }
+  } 
 }
