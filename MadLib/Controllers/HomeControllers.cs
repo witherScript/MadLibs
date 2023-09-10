@@ -52,7 +52,10 @@ namespace MadLibs.Controllers
     //todo: HorrorForm View
 
     [Route("/horror-form")]
-    public Action 
+    public ActionResult HorrorForm()
+    {
+      return View();
+    } 
 
     [Route("/horror")]
     public ActionResult Horror(StoryParameters words)
